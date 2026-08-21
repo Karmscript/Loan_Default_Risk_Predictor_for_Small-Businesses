@@ -111,7 +111,6 @@ Loan_Amount_Term = st.number_input(
     min_value=0.0,
     max_value=400.0
 )
-
 Credit_History = st.radio(
     "Credit History:", 
     options=[0, 1], 
