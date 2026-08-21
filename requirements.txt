@@ -1,0 +1,6 @@
+# This is a comment: Core project dependencies
+numpy==1.26.4
+pandas>=2.1.0
+streamlit
+joblib
+
