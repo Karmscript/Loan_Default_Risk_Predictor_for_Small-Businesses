@@ -7,24 +7,24 @@ import streamlit as st
 
 # Loan models
 model = joblib.load(
-    "loan_default_risk_predictor_model.pkl"
+    "model_artifacts/loan_default_risk_predictor_model.pkl"
 )
 
 # Loan metadata
 metadata = joblib.load(
-    "loan_model_metadata.pkl"
+    "model_artifacts/loan_model_metadata.pkl"
 )
 print(metadata)
 
 # Loan names of feature columns
 feature_names = joblib.load(
-    "loan_feature_columns.pkl"
+    "model_artifacts/loan_feature_columns.pkl"
 )
 print(feature_names)
 
 # Loan model config (threshold)
 model_config = joblib.load(
-    "loan_model_config.pkl"
+    "model_artifacts/loan_model_config.pkl"
 )
 THRESHOLD = model_config["threshold"]
 
@@ -41,7 +41,7 @@ def predict_loan_risk(customer_data):
 
     return probability, prediction
 
-## Testing
+# # Testing
 # customer_data = {
 #     "Gender": "Male",
 #     "Married": "Yes",
@@ -111,10 +111,7 @@ Loan_Amount_Term = st.number_input(
     min_value=0.0,
     max_value=400.0
 )
-Self_Employed = st.selectbox(
-    "Self_Employed",
-    ["Yes", "No"]
-)
+
 Credit_History = st.radio(
     "Credit History:", 
     options=[0, 1], 
