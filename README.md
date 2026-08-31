@@ -7,6 +7,9 @@ The system uses an **XGBoost classifier** trained on historical loan application
 
 An interactive **Streamlit MVP** allows users to enter borrower information and obtain a loan-risk assessment without interacting directly with the underlying machine learning code.
 
+Access the deployed app here:
+https://loan-default-risk-assessment-sme.streamlit.app/
+
 ---
 
 ## Project Overview
@@ -429,4 +432,7 @@ A machine learning prediction is not a guarantee that a borrower will or will no
 
 This project was developed as a machine learning application exploring the use of predictive analytics for loan-default risk assessment and decision support for small-scale lenders.
 
+
+Access the deployed app online here:
+https://loan-default-risk-assessment-sme.streamlit.app/
 ```
