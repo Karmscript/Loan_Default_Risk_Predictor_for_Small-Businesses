@@ -67,7 +67,7 @@ st.title("Loan Default Risk Predictor")
 
 st.write(
     "Assess the likelihood that a customer will default on a loan"
-    "based on historical application data"
+    " based on historical application data"
 )
 
 #Create the borrower application form
