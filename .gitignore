@@ -1,0 +1,4 @@
+# Ignore the folders
+.devcontainer
+.vscode
+.ipynb_checkpoints
