@@ -160,18 +160,18 @@ The test set was not used for hyperparameter tuning or threshold selection.
 
 | Metric    | Result |
 | --------- | -----: |
-| Accuracy  | 64.52% |
-| Precision | 55.32% |
-| Recall    | 68.42% |
-| F1 Score  | 61.18% |
-| ROC-AUC   | 73.01% |
+| Accuracy  | 79.72.52% |
+| Precision | 50.00% |
+| Recall    | 66.67% |
+| F1 Score  | 57.14% |
+| ROC-AUC   | 85.31% |
 
 ### Confusion Matrix
 
 |                       | Predicted No Default | Predicted Default |
 | --------------------- | -------------------: | ----------------: |
-| **Actual No Default** |              34 (TN) |           21 (FP) |
-| **Actual Default**    |              12 (FN) |           25 (TP) |
+| **Actual No Default** |              49 (TN) |           10 (FP) |
+| **Actual Default**    |              5  (FN) |           10 (TP) |
 
 The model correctly identified **25 of the 37 actual defaulters** in the test set, while 12 actual defaulters were missed.
 
@@ -242,12 +242,15 @@ Risk Classification
 The trained model and supporting configuration are stored as serialized Python objects.
 
 ```text
-models/
-│
-├── loan_default_model.pkl
-├── model_config.pkl
-├── model_metadata.pkl
-└── feature_columns.pkl
+
+    └── model_artifacts/
+        ├── loan-train.csv
+        ├── Loan_Default_Risk_Predictor.ipynb
+        ├── loan_default_risk_predictor_model.pkl
+        ├── loan_feature_columns.pkl
+        ├── loan_model_config.pkl
+        └── loan_model_metadata.pkl
+
 ```
 
 ### `loan_default_model.pkl`
@@ -271,23 +274,18 @@ Contains the expected input features for the model.
 ## Project Structure
 
 ```text
-loan-default-predictor/
-│
-├── app.py
-│
-├── models/
-│   ├── loan_default_model.pkl
-│   ├── model_config.pkl
-│   ├── model_metadata.pkl
-│   └── feature_columns.pkl
-│
-├── data/
-│
-├── requirements.txt
-│
-├── README.md
-│
-└── images/
+└── Loan-Default-Risk-Analysis/
+    ├── app.py
+    ├── README.md
+    ├── requirements.txt
+    └── model_artifacts/
+        ├── loan-train.csv
+        ├── Loan_Default_Risk_Predictor.ipynb
+        ├── loan_default_risk_predictor_model.pkl
+        ├── loan_feature_columns.pkl
+        ├── loan_model_config.pkl
+        └── loan_model_metadata.pkl
+
 ```
 
 ---
